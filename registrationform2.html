@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            z-index: -1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 50px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        fieldset {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border: none;
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: -2;
+            animation: slideIn 1s ease-in;
+        }
+
+        fieldset:hover {
+            transform: translateY(-10px);
+        }
+
+        legend {
+            background: linear-gradient(45deg, #71b7e6, #9b59b6);
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #9b59b6;
+            box-shadow: 0 0 8px rgba(155, 89, 182, 0.4);
+            outline: none;
+        }
+
+        label {
+            color: #333;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="button"],
+        input[type="reset"] {
+            background: linear-gradient(45deg, #71b7e6, #9b59b6);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover,
+        input[type="button"]:hover,
+        input[type="reset"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        i {
+            color: #9b59b6;
+            font-size: 1.1em;
+            border-bottom: 2px solid #9b59b6;
+            padding-bottom: 5px;
+        }
+
+        marquee {
+            margin-top: 20px;
+            padding: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            animation: slideIn 1s ease-out;
+        }
+        img {
+            clip-path: circle(50% at 50% 50%);
+            position: sticky;
+            top: 0;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="Picture2.png">
+    <h1>Registration Form</h1>
+    
+    
+    <form action="">
+    <fieldset>
+        <legend><h2>Enter your details:</h2></legend>
+        <label for="fname"><b>First Name* :</b></label>
+        <input type="text" name="fname" required>
+        
+        <label for="mname"><b>Middle Name :</b></label>
+        <input type="text" name="mname">
+
+        <label for="lname"><b>Last Name* :</b></label>
+        <input type="text" name="lname" required>
+
+        <label for="age"><b>Age :</b></label>
+        <input type="number" id="age" name="age" min="1">
+
+        <label for="gender">Gender:</label>
+        <select type="dropdown">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        </select>
+ 
+        <label for="dateofbirth"><b>Date Of Birth:</b></label>
+        <input type="date" name="dateofbirth">
+
+        <label for="institute"><b>Institute:</b></label>
+        <input type="text" name="institute">
+
+        <label for="cgpa"><b>CGPA:</b></label>
+        <input type="text" name="cgpa">
+
+        <label for="rollno"><b>Roll No. :</b></label>
+        <input type="number" name="rollno">
+
+        <label for="address"><b><i>Address Details:</i></b></label><br><br>
+        <label for="city"><b>City:</b></label>
+        <input type="text" name="address">
+        <label for="state"><b>State:</b></label>
+        <input type="text" name="address">
+        <label for="country"><b>Country:</b></label>
+        <input type="text" name="address">
+
+        <label for="conatct"><b><i>Contact Details:</i></b></label><br><br>
+        <label for="mobile"><b>Mobile no:</b></label>
+        <input type="text" name="mobileno">
+
+
+        <label for="email">Email ID :</label>
+        <input type="email" name="email"> <br>
+
+        <label for="phoneno">Phone no : </label>
+        <input type="number" name="phoneno"><br>
+
+
+        <label for="year"><i><b>Year of Study :</b></i></label><br><br>
+        <input type="radio" name="year" id="first">
+        <label for="first">First</label>
+        <input type="radio" name="year" id="second">
+        <label for="second">Second</label>
+        <input type="radio" name="year" id="third">
+        <label for="third">Third</label>
+        <input type="radio" name="year" id="fourth">
+        <label for="fourth">Fourth</label><br><br>
+        
+        <label for="field"><b><i>Choose your interested field:</i></b></label><br><br>
+        <input type="checkbox" id="Machine Learning" name="field1" value="machinelearning">
+        <label for="Machine Learning">Machine Learning</label>
+        <input type="checkbox" id="Data Science" name="field2" value="datascience">
+        <label for="Data Science">Data Science</label><br><br>
+
+        <label for="branch"><b><i>Choose Branch:</i></b></label><br><br>
+        <select name="dropdown">
+        <option value="CSE(core)" selected>CSE(core)</option>
+        <option value="CSE(AI&DS)">CSE(AI&DS)</option>
+        </select><br>
+        
+        <label for="skills"><b><i>Select Skills:</i></b></label><br><br>
+        <input type="checkbox" id="communication" name="skill1" value="communication">
+        <label for="communication">Communication Skills</label><br>
+        <input type="checkbox" id="problem" name="skill2" value="problem">
+        <label for="problem">Problem Solving Skills</label><br><br>
+
+        <label for="hobby"><i><b>Select your favorite hobby:</b></i></label><br><br>
+        <input type="radio" id="playing" name="hobby" value="Playing">
+        <label for="playing">Playing</label><br>
+        <input type="radio" id="painitng" name="hobby" value="Painting">
+        <label for="painting">Painting</label><br>
+        <input type="radio" id="singing" name="hobby" value="Singing">
+        <label for="singing">Singing</label><br>
+        <input type="radio" id="dancing" name="hobby" value="Dancing">
+        <label for="dancing">Dancing</label><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <input type="button" value="Ok">
+        </fieldset>
+    </form>
+        
+        <marquee direction="right">Thank You</marquee>
+    
+</body>
+</html>
